@@ -18,7 +18,7 @@ interactive test page, no curl/Postman needed.
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from generate import generate_answer
+from gemini_llm import generate_answer
 
 app = FastAPI(title="Policy RAG Bot")
 
