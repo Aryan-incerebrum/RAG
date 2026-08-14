@@ -12,3 +12,33 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# RAG / generated data
+chroma_db/
+chunks/
+eLibrarySansadDownloads/
+FormattedExtraction/
+
+# OS files
+.DS_Store
+Thumbs.db

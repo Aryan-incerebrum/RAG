@@ -10,8 +10,9 @@ Requires:
 
 This file expects retrieve.py to be in the same directory — it reuses
 its retrieve() function rather than duplicating the embedding logic.
-"""
 
+
+"""
 from dotenv import load_dotenv
 from google import genai
 from retrieve import retrieve  # reuses your existing retrieval pipeline
@@ -36,15 +37,15 @@ def build_prompt(question: str, matches: list) -> str:
     context = "\n\n".join(context_blocks)
 
     prompt = f"""You are a helpful assistant answering questions about company policy \
-using only the provided context. If the answer isn't in the context, say so clearly \
-instead of guessing.
+                using only the provided context. If the answer isn't in the context, say so clearly \
+                instead of guessing.
 
-Context:
-{context}
+                Context:
+                {context}
 
-Question: {question}
+                Question: {question}
 
-Answer:"""
+                Answer:"""
     return prompt
 
 
